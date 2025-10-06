@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Universeller Box-Sizing Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Intro-Fade Animation */
+#intro {
+    animation: fadeOut 3s ease 2s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
