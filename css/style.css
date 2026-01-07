@@ -1,0 +1,20 @@
+/* !important um sicher zu gehen das Tailwind es nicht überschreibt */
+header {
+    background-color: #F4E0D6 !important;
+}
+footer {
+    background-color: #F4E0D6 !important;
+}
+.bg-custom-beige {
+    background-color: #F4E0D6 !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+
+    /* Erzwungener Abstand */
+    margin-top: 30px !important;    /* Entspricht mt-32 */
+    margin-bottom: 30px !important; /* Entspricht mb-40 */
+}
+
+.text-yuna-orange {
+    color: #E84E1B!important;
+}

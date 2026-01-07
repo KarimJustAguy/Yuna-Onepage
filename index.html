@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <title>Temsi-Änderungsschneiderei</title>
     <!-- SEO -->
     <meta name="description"
           content="Temsi-Änderungsschneiderei in Wien – seit 1998. Änderungen von Kleidern, Anzügen, Brautmode und mehr. Besuchen Sie uns am Josefplatz 6 im Palais Pálffy.">
@@ -11,7 +11,6 @@
           content="Schneiderei Wien, Änderungsschneiderei Wien, Maßschneiderei Wien, Marken Kleidung Ändern, Schneider Atelier, Temsi, Brautkleid ändern, Anzug kürzen, Hose kürzen, Mode Atelier">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.temsi-atelier.at/">
-
     <meta property="og:title" content="Temsi-Änderungsschneiderei in Wien – seit 1998">
     <meta property="og:description"
           content="Kleider, Anzüge & Brautmode professionell ändern lassen. Direkt am Josefplatz im 1. Bezirk Wien.">
@@ -19,41 +18,25 @@
     <meta property="og:url" content="https://www.temsi-atelier.at/">
     <meta property="og:type" content="website"/>
 
-    <title>Temsi-Änderungsschneiderei</title>
-
-    <!-- CDN+CSS -->
+    <!-- Tailwind + Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
     <link href="css/output.css" rel="stylesheet">
 
-    <!-- Carousel + Playfair Font -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        playfair: ['"Playfair Display"', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
 </head>
-<body style="background-image: url('./files/yunaBG.png');" class="bg-cover bg-center bg-no-repeat">
+<body style="background-image: url('./files/yunaBG.png');">
 
-<div id="intro" class="fixed inset-0 z-50 bg-black">
+<!--<div id="intro" class="fixed inset-0 z-50 bg-black">
     <video autoplay muted playsinline class="w-full h-full object-cover">
         <source src="files/yunaIntro.mp4" type="video/mp4">
         Dein Browser unterstützt keine Videos.
     </video>
-</div>
+</div>-->
 
 <!-- Header  -->
-<header class="bg-white fixed top-0 w-full p-2 shadow-md z-40">
-    <nav class="container mx-auto flex justify-between items-center relative">
+<header  class="fixed top-0 w-full p-2 z-40">
+    <nav class="flex justify-between items-center px-4">
         <a href="#home">
-            <img src="files/yunaLogo.jpg" alt="Yuna Logo" class="h-12"/>
+            <img src="files/yunaLogoOG.jpg" alt="Yuna Logo" class="h-12"/>
         </a>
         <ul class="flex space-x-6">
             <li><a href="#home"><strong style="font-family: 'Playfair Display', serif;">Home</strong></a></li>
@@ -65,78 +48,51 @@
 
 <main class="pt-20">
     <!-- Home Section -->
-    <section id="home" class="py-12 text-center flex flex-col items-center">
-        <!-- SEO -->
-        <h1 class="sr-only">
-            Temsi-Änderungsschneiderei – Maßarbeit und Änderungen in Wien seit 1998
-        </h1>
-        <div class="w-[90%] sm:w-2/3 p-4 sm:p-6 rounded-lg sm:bg-white/0">
-            <div class="swiper mySwiper h-[300px] sm:h-[500px] md:h-[700px]">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="files/yunaLogoOG.jpg" alt="Willkommens Blatt"
-                             class="rounded-lg object-contain w-full h-full"/>
-                    </div>
-                    <div class="swiper-slide">
-                        <img loading="lazy" src="files/menu1.jpg" alt="Abstecken eines Kleid"
-                             class="rounded-lg object-contain w-full h-full"/>
-                    </div>
-                    <div class="swiper-slide">
-                        <img loading="lazy" src="files/menu2.jpg" alt="Schneider bei der Arbeit"
-                             class="rounded-lg object-contain w-full h-full"/>
-                    </div>
-                    <div class="swiper-slide">
-                        <img loading="lazy" src="files/menu3.jpg" alt="Schneider bei der Arbeit"
-                             class="rounded-lg object-contain w-full h-full"/>
-                    </div>
+    <section id="home" class="pb-8 flex flex-col items-center mb-40">
+        <div class="swiper mySwiper w-[90%] sm:w-2/3 h-[300px] sm:h-[500px] md:h-[700px]">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="files/dish1.jpeg" alt="Speise Name" class="object-contain w-full h-full"/>
                 </div>
-                <!-- Navigation -->
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev hidden"></div>
-                <div class="swiper-button-next hidden"></div>
+                <div class="swiper-slide">
+                    <img src="files/dish2.jpeg" alt="Speisen Name" class="object-contain w-full h-full"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="files/dish3.jpeg" alt="Speisen Name" class="object-contain w-full h-full"/>
+                </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev hidden"></div>
+            <div class="swiper-button-next hidden"></div>
         </div>
     </section>
 
-    <!-- Über uns -->
-    <section id="about"
-             class="py-16 text-center sm:text-left flex flex-col items-center sm:items-start sm:flex-row sm:justify-center sm:gap-6">
-        <div class="w-full sm:w-2/3 flex flex-col-reverse sm:flex-row-reverse sm:items-center sm:gap-6 p-4 sm:p-6 rounded-lg sm:bg-white/0 min-h-[400px] will-change-transform transform-gpu">
-
-            <!-- Text links -->
-            <div class="w-full sm:w-1/2 flex flex-col justify-center text-center sm:text-left">
-                <h1 class="text-2xl sm:text-4xl font-playfair mb-4">
-                    <strong>Willkommen in der</strong>
-                </h1>
-                <h1 class="text-2xl sm:text-4xl font-playfair mb-4">
-                    <strong>Temsi-Änderungsschneiderei</strong>
-                </h1>
-                <p class="text-base sm:text-lg font-playfair leading-relaxed tracking-normal">
-                    <strong>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et
-                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                        rebum. Stet clita kasd gubergren,
-                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-                        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                        aliquyam erat, sed diam voluptua.
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        takimata sanctus est Lorem ipsum dolor sit amet.
-                    </strong>
-                </p>
-            </div>
-
-            <div class="w-full sm:w-1/2 flex justify-center sm:justify-end">
-                <img loading="lazy" src="files/yunaLogoOG.jpg" alt="Stecknadel"
-                     class="w-[90%] max-w-md rounded-lg shadow-lg hidden sm:block"/>
-            </div>
-
+    <!-- Speisekarte -->
+    <div class="bg-custom-beige shadow-xl p-8 mt-32 mb-40 mx-auto max-w-4xl w-[90%]">
+            <p class="font-playfair text-yuna-orange">
+                Das sind unsere .................
+            </p>
+            <img src="files/menu2.jpg" class="rounded-xl w-full" alt="Signature Bowls"/>
         </div>
-    </section>
+
+
+    <div class="bg-custom-beige shadow-xl p-8 mt-32 mx-auto max-w-4xl w-[90%]">
+        <p class="font-playfair text-yuna-orange">
+            Das sind unsere .................
+        </p>
+        <img src="files/menu3.jpg" class="rounded-xl w-full" alt="Signature Bowls"/>
+    </div>
+
+    <div class="bg-custom-beige shadow-xl p-8 mt-32 mx-auto max-w-4xl w-[90%]">
+        <p class="font-playfair text-yuna-orange">
+            Das sind unsere .................
+        </p>
+        <img src="files/menu1.jpg" class="rounded-xl w-full" alt="Signature Bowls"/>
+    </div>
 
     <!-- Kontakt Section -->
     <section id="kontakt" class="py-16 text-center flex flex-col items-center sm:flex-row sm:justify-center sm:gap-6">
-        <div class="w-[90%] sm:w-2/3 p-4 sm:p-6 rounded-lg sm:bg-white/0">
+        <div class="bg-custom-beige shadow-xl p-8 mt-32 mx-auto max-w-4xl w-[90%]">
             <!-- Öffnungszeiten -->
             <div class="mt-6 p-4 sm:p-6 rounded-lg w-full relative bg-cover bg-center">
                 <div class="relative text-dark font-playfair text-center sm:bg-white/0 p-4 rounded">
@@ -172,29 +128,32 @@
     </section>
 </main>
 
-<footer class="bg-white text-center p-4">
+<footer class="text-center p-4">
     <p>
-        Temsi-Änderungsschneiderei OG |
+        Yuna OG |
         <a href="impressum.html" class="underline">Impressum</a> |
         <a href="datenschutz.html" class="underline">Datenschutzerklärung</a>
     </p>
 </footer>
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Playfair Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <script>
-    var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    playfair: ['"Playfair Display"', 'serif'],
+                }
+            }
         }
-    });
+    }
 </script>
+
+<!-- Swiper JS für das Bilder Karousel -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="index.js" defer></script>
 </body>
 </html>
 
